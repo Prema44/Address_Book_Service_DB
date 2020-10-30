@@ -31,3 +31,7 @@ Update AddressBook SET phone=7896541235 WHERE firstname='Aniket';
 
 #UC5
 DELETE from AddressBook where firstname='Sanket';
+
+#UC6
+SELECT * from AddressBook WHERE city ='Mumbai';
+SELECT * from AddressBook WHERE state ='Karnataka';
