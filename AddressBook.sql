@@ -18,3 +18,9 @@ USE addressbookservice;
     -> );
 
  DESCRIBE Addressbook;
+
+#UC3
+INSERT INTO addressBook values('Adity','Kharade','Kaulkhed','Akola','Maharashtra',444001, 8844557722,'abc@d.com');
+INSERT INTO AddressBook VALUES ('Aniket','Sarap','Kaulkhed','Akola','Maharashtra',444001,8475612478,'adc@d.com');
+INSERT INTO AddressBook VALUES ('Prajwal','Bhamodre','Kaulkhed','Akola','Maharashtra',444001,8475574178,'ac@d.com');
+INSERT INTO AddressBook VALUES ('Sanket','Deshmukh','Kaulkhed','Akola','Maharashtra',444001,7445566221,'aac@d.com');
