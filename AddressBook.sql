@@ -35,3 +35,9 @@ DELETE from AddressBook where firstname='Sanket';
 #UC6
 SELECT * from AddressBook WHERE city ='Mumbai';
 SELECT * from AddressBook WHERE state ='Karnataka';
+
+#UC7
+SELECT city, count(*) FROM AddressBook
+-> GROUP BY city;
+SELECT state, count(*) FROM AddressBook
+-> GROUP BY state;
