@@ -41,3 +41,8 @@ SELECT city, count(*) FROM AddressBook
 -> GROUP BY city;
 SELECT state, count(*) FROM AddressBook
 -> GROUP BY state;
+
+#UC8
+SELECT * from AddressBook
+   -> WHERE city = 'Akola'
+   -> ORDER BY firstname, lastname;
