@@ -28,3 +28,6 @@ INSERT INTO AddressBook VALUES ('Sanket','Deshmukh','Kaulkhed','Akola','Maharash
 #UC4
 Update AddressBook SET phone=1234567890 WHERE name='Adity';
 Update AddressBook SET phone=7896541235 WHERE firstname='Aniket';
+
+#UC5
+DELETE from AddressBook where firstname='Sanket';
