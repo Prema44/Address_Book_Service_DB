@@ -67,3 +67,7 @@ CREATE TABLE AddressBook
    -> );
 ALTER TABLE AddressBook
     -> ADD BookType VARCHAR(100) NOT NULL AFTER BookName;
+
+#UC10
+SELECT BookType, COUNT(*) FROM AddressBook
+    -> GROUP BY BookType;
