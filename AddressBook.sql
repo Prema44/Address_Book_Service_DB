@@ -46,3 +46,22 @@ SELECT state, count(*) FROM AddressBook
 SELECT * from AddressBook
    -> WHERE city = 'Akola'
    -> ORDER BY firstname, lastname;
+
+#UC9
+ALTER TABLE AddressBook RENAME TO Contacts;
+
+ALTER TABLE Contacts
+    -> DROP PRIMARY KEY;
+ALTER TABLE Contacts
+    -> ADD ContactID INT NOT NULL AUTO_INCREMENT FIRST,
+    -> ADD PRIMARY KEY(ContactID);
+
+
+CREATE TABLE AddressBook
+   -> (
+   -> BookID INT NOT NULL AUTO_INCREMENT,
+   -> ContactID INT NOT NULL,
+   -> BookName VARCHAR(100) NOT NULL,
+   -> PRIMARY KEY (BookID),
+   -> FOREIGN KEY (ContactID) REFERENCES Contacts (ContactID)
+   -> );
