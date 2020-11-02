@@ -65,3 +65,5 @@ CREATE TABLE AddressBook
    -> PRIMARY KEY (BookID),
    -> FOREIGN KEY (ContactID) REFERENCES Contacts (ContactID)
    -> );
+ALTER TABLE AddressBook
+    -> ADD BookType VARCHAR(100) NOT NULL AFTER BookName;
