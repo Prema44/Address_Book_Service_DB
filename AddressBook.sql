@@ -71,3 +71,14 @@ ALTER TABLE AddressBook
 #UC10
 SELECT BookType, COUNT(*) FROM AddressBook
     -> GROUP BY BookType;
+
+#UC11
+INSERT INTO AddressBook (contactId, BookName, BookType) VALUES
+    -> (1, 'FamilyBook', 'Family'),
+    -> (1, 'FriendBook', 'Friend'),
+    -> (2, 'FriendBook','Friend'),
+    -> (2, 'ProfessionBook','Profession'),
+    -> (3, 'FamilyBook','Family'),
+    -> (4, 'ProfessionBook','Profession'),
+    -> (4, 'FamilyBook','Family'),
+    -> (5, 'FriendBook','Friend');
