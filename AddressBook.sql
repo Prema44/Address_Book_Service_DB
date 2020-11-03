@@ -112,3 +112,11 @@ insert into addressbookTypes values
 (408574, 'Satara', 'Maharashtra'),
 (800561, 'hubli', 'Karnataka'),
 (281557, 'Delhi', 'Delhi');
+
+#Usecase 13:
+select  contacts.contactId, addressbook.addressbookName, addressbookTypes.type, contacts.firstName, contacts.lastName, 
+contacts.address, address.city, address.state, address.zip, contacts.phone, contacts.email
+from contacts
+inner join address on contacts.zip = address.zip
+inner join addressbook on contacts.contactId = addressbook.contactId
+inner join addressbookTypes on addressbookTypes.addressbookName = addressbook.addressbookName;
