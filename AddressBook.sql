@@ -82,3 +82,33 @@ INSERT INTO AddressBook (contactId, BookName, BookType) VALUES
     -> (4, 'ProfessionBook','Profession'),
     -> (4, 'FamilyBook','Family'),
     -> (5, 'FriendBook','Friend');
+
+
+# UC 12
+create table zipCityState (
+zip numeric(6) not null,
+city varchar(100) not null,
+state varchar(100) not null,
+foreign key (zip) references contact_table(zip)
+);
+create table addressbookTypes (
+addressbookName varchar(100) not null,
+type varchar(100) not null,
+foreign key (addressbookName) references contact_table(addressbookName)
+);
+alter table contacts_table 
+drop column city,
+drop column state;
+alter table addressbook_table
+drop column type;
+insert into addressbookTypes values 
+('AddressBook1', 'family'),
+('AddressBook2','friend'), 
+('AddressBook3','profession');
+insert into addressbookTypes values 
+(405689, 'Mumbai', 'Maharashtra'),
+(400067, 'Mumbai', 'Maharashtra'),
+(481023, 'Pune', 'Maharashtra'),
+(408574, 'Satara', 'Maharashtra'),
+(800561, 'hubli', 'Karnataka'),
+(281557, 'Delhi', 'Delhi');
